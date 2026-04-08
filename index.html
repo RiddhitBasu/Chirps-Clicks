@@ -1,139 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chirps and Clicks</title>
     <style>
+        /* 1. General Styles */
         h1 {
             font-size: 50px;
             text-align: center;
-           }
-    </style>
-</head>   
-<body>
-<h1>Chirps and Clicks</h1>
-<style>
-        p {
-            font-size: 15px;
+        }
+        p.subtitle {
+            font-size: 20px;
             text-align: center;
-           }
-    </style>
-<p style="font-size:20px;">with Riddhit Basu</p>
-<div class="button-container">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Image and Text Block</title>
-<style>
-.block {
-    width: 300px;
-    margin: 30px; /* Adds 15px of space around every single block */
-    /* ... rest of your styles ... */
-}
-    /* New style to make sure the link doesn't change your text color */
-    .block-link {
-        text-decoration: none; /* Removes the underline */
-        color: inherit;        /* Keeps the text color #333 */
-        display: inline-block; /* Helps the link wrap the block correctly */
-    }
+        }
 
-    .block {
-        width: 300px;
-        border: 2px solid #ccc;
-        border-radius: 8px;
-        padding: 10px;
-        text-align: center;
-        background-color: #f9f9f9;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        transition: transform 0.2s; /* Added a slight hover effect */
-    }
+        /* 2. Layout Container */
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;    /* Allows blocks to move to next line on mobile */
+            justify-content: center; 
+            gap: 20px;          /* Adds space between the blocks */
+            padding: 20px;
+        }
 
-    /* Optional: Makes the block pop a little when you hover over it */
-    .block:hover {
-        transform: translateY(-5px);
-        border-color: #999;
-    }
+        /* 3. The Block Styles */
+        .block-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
 
-    .block img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 5px;
-    }
-
-    .block p {
-        margin-top: 10px;
-        font-size: 16px;
-        color: #333;
-    }
-</style>
-</head>
-<body>
-
-<a href="tadoba.html" class="block-link">
-    <div class="block">
-        <img src="images/Shambhu2.jpg?ver123" alt="Sample Image">
-        <p><strong>Tigers of Tadoba</strong></p>
-        <p>My experiences on my trip to Tadoba National Park, Maharashtra</p>
-    </div>
-
-<a href="Banda.html" class="block-link">
-    <div class="block">
-        <img src="images/Orange_Thrush.jpg?ver123" alt="Sample Image">
-        <p><strong>Birds of Banda.</strong></p>
-        <p>My experiences on my trip to Banda and Tilari, Maharashtra</p>
-    </div>
-
-<a href="city.html" class="block-link">
-    <div class="block">
-        <img src="images/Painted_Stork.jpg?ver123" alt="Sample Image">
-        <p><strong>The city of lakes</strong></p>
-        <p>My experiences of birding in the lakes of Bangalore.</p>
-    </div>
-</a>
-    <head>
-		<style>
-		h1 {
-            font-size: 50px;
+        .block {
+            width: 300px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
             text-align: center;
-           }
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .block:hover {
+            transform: translateY(-5px);
+            border-color: #999;
+        }
+
+        .block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* 4. Unique style for the single Maldives block if needed */
+        .center-wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 20px;
+        }
     </style>
-</head>
-<head>
-<style>
-    /* All your CSS goes inside the <style> tag */
-    .center-wrapper {
-        display: flex;
-        justify-content: center; 
-        padding: 20px;
-    }
-
-    .block-link {
-        display: block;
-        text-decoration: none; 
-        color: #333; /* Dark grey text */
-    }
-
-    .block {
-        text-align: center;
-        border: 1px solid #ddd; 
-        padding: 15px;
-        border-radius: 8px;
-        width: fit-content; /* Keeps the box from stretching too wide */
-    }
-
-    .block img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto 10px; /* Centers image and adds space below */
-    }
-</style>
 </head>
 <body>
 
+    <h1>Chirps and Clicks</h1>
+    <p class="subtitle">with Riddhit Basu</p>
 
+    <div class="button-container">
+        
+        <a href="tadoba.html" class="block-link">
+            <div class="block">
+                <img src="images/Shambhu2.jpg?ver123" alt="Tadoba">
+                <p><strong>Tigers of Tadoba</strong></p>
+                <p>My experiences on my trip to Tadoba National Park, Maharashtra</p>
+            </div>
+        </a>
+
+        <a href="Banda.html" class="block-link">
+            <div class="block">
+                <img src="images/Orange_Thrush.jpg?ver123" alt="Banda">
+                <p><strong>Birds of Banda</strong></p>
+                <p>My experiences on my trip to Banda and Tilari, Maharashtra</p>
+            </div>
+        </a>
+
+        <a href="city.html" class="block-link">
+            <div class="block">
+                <img src="images/Painted_Stork.jpg?ver123" alt="City of Lakes">
+                <p><strong>The city of lakes</strong></p>
+                <p>My experiences of birding in the lakes of Bangalore.</p>
+            </div>
+        </a>
+
+    </div>
+    <h1>Other Blogs</h1>
     <div class="center-wrapper">
         <a href="Maldives.html" class="block-link">
             <div class="block">
-                <img src="images/m1.jpg?ver123" alt="Sample Image">
+                <img src="images/m1.jpg?ver123" alt="Maldives">
                 <p><strong>Mystical Maldives</strong></p>
                 <p>My experiences in the archipelago of Maldives.</p>
             </div>
